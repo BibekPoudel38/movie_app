@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:movie_app/view/homepage.dart';
+import 'package:flutter/services.dart';
+import 'package:movie_app/view/mainView.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setPreferredOrientations(
+    [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown],
+  );
   runApp(MyApp());
 }
 
@@ -11,10 +16,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'M Flix',
       theme: ThemeData(),
-      home: HomePage(),
+      home: MainView(),
     );
   }
 }
-

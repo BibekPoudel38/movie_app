@@ -1,6 +1,10 @@
+import 'dart:io';
+import 'dart:typed_data';
 import 'package:get/get.dart';
+import 'package:http/http.dart' as http;
 import 'package:movie_app/Resources/resource.dart';
 import 'package:movie_app/model/singleMovieModel.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class SingleMovieController extends GetxController {
   final String id;
@@ -28,5 +32,13 @@ class SingleMovieController extends GetxController {
       print("object");
     }
     isLoading = false;
+  }
+
+  openTorrentLink(String url, String name) async {
+    if (await canLaunch(url)) {
+      launch(url);
+    } else {
+      
+    }
   }
 }

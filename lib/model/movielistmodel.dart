@@ -132,7 +132,7 @@ class Movie {
         year: json["year"],
         rating: json["rating"].toDouble(),
         runtime: json["runtime"],
-        genres: List<String>.from(json["genres"].map((x) => x)),
+        genres: json["genres"] == null ? null : List<String>.from(json["genres"].map((x) => x)),
         summary: json["summary"],
         descriptionFull: json["description_full"],
         synopsis: json["synopsis"],

@@ -31,6 +31,8 @@ dependencies:
   get: ^3.24.0
   http: ^0.12.2
   url_launcher: ^5.7.10
+  video_player: ^1.0.1
+  path_provider: ^1.6.27
 
 dev_dependencies:
   flutter_test:
